@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dope-Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/75f1f3c622.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/logo.png.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href=" #header ">Home</a></li>
+                <li><a href=" #about ">About</a></li>
+                <li><a href=" #contact ">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hi, I'm<span> Jose</span><br> Kinjango</h1>
+        </div>
+    </div>
+</div> 
+<!-------------about---------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/about.png.jpeg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a multilingual software engineer enthusiastic about life and learning, wanting to make a difference with a
+                    company that values growth, Innovation, diversity, excellence and leadership. I am a curious, intelligent, collaborative
+                    person who is passionate about technology and driven to get things done. Not afraid to bring my authentic self to
+                    work. I embrace a continuous learner mentality with a desire to grow myself as well as others.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Development</span><br>Web app Development, Building Android/iOS apps, Machine Learning.</li>
+                        <li><span>Framework</span><br> React.JS, Angular, node.JS, ASP.net, Blazor, JUnit, Unit testin, MongoDB, Flutter, Android, Studio, Firebase, Git. </li>
+                        <li><span>Programming Languages</span><br> C#, C, Java, Python, XML, MATLAB, ASM, MySQL, SQL, JavaScript HTML, CSS,
+                                Visual Basic.</li>
+                        <li><span>Natural Languages</span><br> Portuguese, Chinese, English, Spanish. </li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2019</span><br>Field Technician, Edmonds School district</li>
+                        <li><span>2020-2021</span><br>Events Planning Coordinator, Office Assistant, Edmonds Community College </li>
+                            
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                         <li><span>2022</span><br>BS, Computer Science at Texas Tech University</li>
+                        <li><span>2019</span><br>AS, Computer Science at Edmonds Comm. College</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+
+
+
+<!--------------Conact------------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me </h1>
+                <p> <i class="fa-solid fa-paper-plane"></i> jose.phkinjango@gmail.com</p>
+                <p> <i class="fa-solid fa-square-phone"></i>+1206-972-9388</p>
+                <div class="social-icons">
+                    
+                    <a href="https://linkedin.com/in/josekinjango"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://GitHub.com/josephkinjango/"><i class="fa-brands fa-github"></i></a>
+                    
+                     
+                       
+                </div>   
+                <a href="Images/Jose_Kinjango_Res2023.pdf" download class="btn btn2">Download Resume</a>
+            
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+</script>
+
+</body>
+</html>
